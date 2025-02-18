@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Formulir Pendaftaran</h2>
+
+    <form action="submit_form.php" method="post">
+        <label for="nama-depan">Nama Depan:</label>
+        <input type="text" id="nama-depan" name="nama_depan" required>
+
+        <label for="nama-belakang">Nama Belakang:</label>
+        <input type="text" id="nama-belakang" name="nama_belakang" required>
+
+        <label for="tgl-lahir">Tanggal Lahir:</label>
+        <input type="date" id="tgl-lahir" name="tgl_lahir" required>
+
+        <label>Jenis Kelamin:</label>
+        <input type="radio" id="laki-laki" name="jenis_kelamin" value="Laki-laki" required>
+        <label for="laki-laki">Laki-laki</label>
+
+        <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" required>
+        <label for="perempuan">Perempuan</label>
+
+        <label for="alamat">Alamat:</label>
+        <input type="text" id="alamat" name="alamat" required>
+
+        <label for="no-telp">Nomor Telepon:</label>
+        <input type="tel" id="no-telp" name="no_telp" required pattern="[0-9]{10,13}" maxlength="13" inputmode="numeric">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="pendidikan">Pendidikan Terakhir:</label>
+        <select id="pendidikan" name="pendidikan" required>
+            <option value="SMA">SMA</option>
+            <option value="D3">D3</option>
+            <option value="S1">S1</option>
+            <option value="Lainnya">Lainnya</option>
+        </select>
+
+        <label for="pendidikan-lain">Jika Lainnya, Silakan Isi:</label>
+        <input type="text" id="pendidikan-lain" name="pendidikan-lain">
+
+        <label for="keahlian">Keahlian:</label>
+        <select id="keahlian" name="keahlian" required>
+            <option value="Public Speaking">Public Speaking</option>
+            <option value="Desain">Desain</option>
+            <option value="Penulisan">Penulisan</option>
+            <option value="Lainnya">Lainnya</option>
+        </select>
+
+        <label for="keahlian-lain">Jika Lainnya, Silakan Isi:</label>
+        <input type="text" id="keahlian-lain" name="keahlian-lain">
+
+        <label for="volunteer">Pernah menjadi volunteer?</label>
+        <input type="radio" id="ya" name="volunteer" value="Ya" required>
+        <label for="ya">Ya</label>
+        <input type="radio" id="tidak" name="volunteer" value="Tidak" required>
+        <label for="tidak">Tidak</label>
+
+        <label for="kenapa-volunteer">Kenapa ingin menjadi volunteer?</label>
+        <input type="text" id="kenapa-volunteer" name="kenapa-volunteer" required>
+
+        <label for="kotamana">Bersedia menjadi volunteer di Kota mana?</label>
+        <input type="text" id="kotamana" name="kotamana" required>
+
+        <label for="waktu">Waktu yang bisa disediakan:</label>
+        <select id="waktu" name="waktu" required>
+            <option value="Weekend">Weekend</option>
+            <option value="Weekday">Weekday</option>
+            <option value="Fulltime">Fulltime</option>
+            <option value="Parttime">Part-time</option>
+            <option value="Lainnya">Lainnya</option>
+        </select>
+
+        <label for="waktu-lain">Jika Lainnya, Silakan Isi:</label>
+        <input type="text" id="waktu-lain" name="waktu-lain">
+
+        <label for="cv">Upload CV atau Surat Motivasi (Opsional):</label>
+        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+
+        <label for="foto">Upload Foto atau KTP (Jika Diperlukan):</label>
+        <input type="file" id="foto" name="foto" accept=".png,.jpg,.jpeg">
+
+        <label for="setuju">Setuju dengan syarat dan ketentuan?:</label>
+        <input type="checkbox" id="setuju" name="setuju" required>
+        <label for="setuju">Saya setuju dengan syarat dan ketentuan</label><br>
+
+        <input type="checkbox" id="persetujuan" name="persetujuan" required>
+        <label for="persetujuan">Saya memberikan persetujuan untuk penggunaan data</label>
+
+        <br><br>
+        <button onclick>Kirim</button>
+    </form>
+</body>
+</html>
